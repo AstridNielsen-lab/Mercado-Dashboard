@@ -1,26 +1,35 @@
 # 🧠 Dashboard Financeira Inteligente - Mercado Neural
 
-🚀 **Nova Versão Desktop Disponível!** - Instalador completo para Windows com interface gráfica
+🚀 **Versão Web Atualizada!** - Nova splash screen com download direto e acesso à versão web
 
 📊 Uma dashboard completa para gestão de investimentos em criptomoedas, ações e análise de mercado com IA integrada.
 
-## 📦 Downloads
+## 📦 Downloads e Acesso
 
-### 🎯 Versão Desktop (Recomendada)
-- **🖥️ Instalador Completo**: `Mercado-Neural-Setup-v1.0.0.exe` (164 MB)
+### 🌐 Versão Web (Instantânea) ⭐ NOVA!
+- **🎯 Splash Screen**: [splash.html](./splash.html) - Portal de entrada com downloads
+- **📊 Dashboard Principal**: [index.html](./index.html) - Aplicação completa no navegador
+- **✨ Funcionalidades**:
+  - Acesso instantâneo sem instalação
+  - Interface responsiva e moderna
+  - Todos os recursos da versão desktop
+  - Salva dados localmente no navegador
+
+### 🎯 Versão Desktop
+- **🖥️ Instalador Completo**: [Baixar Setup (164 MB)](https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural/releases/latest/download/Mercado-Neural-Setup-v1.0.0.exe)
   - Interface gráfica de instalação em português
   - Atalhos automáticos no Menu Iniciar e Área de Trabalho
   - Desinstalador incluído
   - Registro no Windows (Adicionar/Remover Programas)
   
-- **📁 Versão Portable**: `Mercado-Neural-v1.0.0-Windows-Portable.zip` (269 MB)
+- **📁 Versão Portable**: [Baixar ZIP (269 MB)](https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural/releases/latest/download/Mercado-Neural-v1.0.0-Windows-Portable.zip)
   - Não requer instalação
   - Execute diretamente de qualquer pasta
   - Ideal para testes ou uso temporário
 
-### 🌐 Versão Web
-- **Demo Online**: [splash.html](./splash.html) - Acesso instantâneo via navegador
-- **Aplicação Principal**: [index.html](./index.html) - Dashboard completo
+### 📱 Links Úteis
+- **🔗 GitHub**: [Ver repositório](https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural)
+- **📖 Documentação**: Incluída neste README
 
 ## 🎆 Funcionalidades
 
@@ -73,16 +82,32 @@
 
 ## 🚀 Como Usar
 
-### Opção 1: Versão Web (Navegador)
+### Opção 1: Versão Web (Navegador) ⭐ NOVA!
+
+**Acesso Rápido via Splash Screen:**
+1. Abra [splash.html](./splash.html) no navegador
+2. Escolha "Usar Versão Web" para acessar imediatamente
+3. Ou baixe a versão desktop diretamente
+
+**Acesso Direto:**
 ```bash
 # Clone ou baixe os arquivos
-# Não requer instalação de dependências
-# Funciona diretamente no navegador
+git clone https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural
+cd Mercado-Dashboard-Neural
+
+# Abra index.html no navegador (não requer servidor)
 ```
 
-### Opção 2: Versão Desktop (Windows) ⭐ NOVO!
+### Opção 2: Versão Desktop (Windows)
+
+**Via Splash Screen (Recomendado):**
+1. Acesse [splash.html](./splash.html)
+2. Clique em "Baixar Instalador" ou "Versão Portable"
+3. Siga as instruções na tela
+
+**Instalação Manual:**
 ```bash
-# Instalação automática (recomendada)
+# Instalação automática
 1. Execute install-windows.bat como Administrador
 2. Siga as instruções na tela
 3. A aplicação será compilada e instalada automaticamente
@@ -127,12 +152,18 @@ APIS: {
 ### 3. Execução
 
 #### Versão Web:
-1. Abra o arquivo `index.html` em um navegador moderno
-2. A dashboard carregará automaticamente
-3. Todas as funcionalidades estarão disponíveis imediatamente
+**Via Splash Screen (Novo):**
+1. Abra [splash.html](./splash.html) em um navegador moderno
+2. Clique em "Usar Versão Web" para acesso instantâneo
+3. A dashboard carregará automaticamente
+
+**Acesso Direto:**
+1. Abra o arquivo `index.html` diretamente no navegador
+2. Todas as funcionalidades estarão disponíveis imediatamente
+3. Dados são salvos localmente no navegador
 
 #### Versão Desktop:
-1. Execute o instalador criado na pasta `dist/`
+1. Baixe via splash screen ou execute o instalador da pasta `dist/`
 2. Siga o assistente de instalação
 3. Use o atalho criado no Desktop ou Menu Iniciar
 4. Aproveite recursos exclusivos desktop!
@@ -142,7 +173,8 @@ APIS: {
 ```
 Mercado Neural/
 │
-├── index.html              # Página principal
+├── index.html              # Dashboard principal
+├── splash.html             # Página de entrada e downloads
 │
 ├── assets/
 │   ├── css/
@@ -315,20 +347,37 @@ console.log(dashboard.getSystemMetrics());
 localStorage.clear(); // Remove todos os dados salvos
 ```
 
-## 📦 Downloads
+## 📦 Acesso Rápido
 
-### Versão Web
-- Abra `index.html` diretamente no navegador
-- Sem necessidade de instalação
+### 🌐 Versão Web (Instantânea)
+- **Portal de Entrada**: [splash.html](./splash.html) - Splash screen com opções
+- **Dashboard Direto**: [index.html](./index.html) - Acesso direto à aplicação
+- **Sem instalação**: Funciona diretamente no navegador
+- **Responsivo**: Interface adaptável a qualquer dispositivo
 
-### Versão Desktop (Windows)
+### 🖥️ Versão Desktop (Windows)
+- **Via Splash Screen**: Links diretos para download na página inicial
 - **Automática**: Execute `install-windows.bat`
 - **Manual**: Compile com `npm run build-win`
-- **Recursos extras**: Menu nativo, atalhos, notificações
+- **Recursos extras**: Menu nativo, atalhos, notificações sistema
 
-## 📜 Atualizações Futuras
+## 📜 Atualizações Recentes e Futuras
 
+### ✅ Recém Adicionado (v1.1.0)
+- [x] ✅ Splash screen moderna com download direto
+- [x] ✅ Links para releases do GitHub
+- [x] ✅ Acesso direto à versão web
+- [x] ✅ Interface melhorada da versão web
+- [x] ✅ Instruções de instalação integradas
+
+### 🔄 Anteriormente Implementado
 - [x] ✅ Versão desktop para Windows
+- [x] ✅ Dashboard responsiva
+- [x] ✅ Integração com IA (Gemini)
+- [x] ✅ Sistema de criptomoedas
+- [x] ✅ Sistema de ações
+
+### 📋 Próximas Funcionalidades
 - [ ] Integração com exchanges reais
 - [ ] Notificações push desktop
 - [ ] App mobile nativo
@@ -341,15 +390,23 @@ localStorage.clear(); // Remove todos os dados salvos
 
 ## 🎆 Suporte
 
-### Versão Web
-1. Verifique o console do navegador para erros
-2. Consulte a documentação das APIs utilizadas
-3. Teste em modo de desenvolvedor (F12)
+### 🌐 Versão Web
+1. **Primeiro acesso**: Use [splash.html](./splash.html) como ponto de entrada
+2. **Problemas de loading**: Verifique o console do navegador (F12)
+3. **APIs não funcionando**: Configure suas chaves em `assets/js/config.js`
+4. **Dados perdidos**: Verifique se localStorage está habilitado
+5. **Performance**: Use navegadores modernos (Chrome, Firefox, Edge)
 
-### Versão Desktop
-1. Use F12 para abrir as ferramentas de desenvolvedor
-2. Verifique logs em %APPDATA%\Mercado Neural\
-3. Consulte o [Guia de Instalação](INSTALL_WINDOWS.md) para problemas específicos
+### 🖥️ Versão Desktop
+1. **Instalação**: Baixe via splash screen ou consulte [INSTALL_WINDOWS.md](INSTALL_WINDOWS.md)
+2. **Debugging**: Use F12 para abrir ferramentas de desenvolvedor
+3. **Logs**: Verifique em `%APPDATA%\Mercado Neural\`
+4. **Atualizações**: Re-baixe da splash screen ou GitHub releases
+
+### 📞 Canais de Suporte
+- **Issues GitHub**: [Reportar problemas](https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural/issues)
+- **Documentação**: Este README
+- **Código**: Totalmente open source para análise
 
 ## 📝 Licença
 
@@ -358,7 +415,19 @@ Use por sua conta e risco em ambiente de produção.
 
 ---
 
+## 🚀 Acesso Rápido
+
+**🌐 [▶️ USAR VERSÃO WEB AGORA](./splash.html)** 
+
+**📱 [Dashboard Direto](./index.html)**
+
+**📂 [Baixar Desktop](https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural/releases/latest)**
+
+---
+
 **Desenvolvido com ❤️ para o mercado financeiro brasileiro**
 
 *Mercado Neural - Onde a IA encontra os investimentos* 🤖💰
+
+**Nova versão web com splash screen profissional - Acesse agora mesmo!** 🎯
 
