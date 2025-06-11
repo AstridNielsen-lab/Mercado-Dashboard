@@ -1,0 +1,44 @@
+LICENÇA MIT
+
+Copyright (c) 2024 Mercado Neural Team
+
+Por meio desta, concede-se permissão, livre de cobrança, para qualquer pessoa
+obter uma cópia deste software e arquivos de documentação associados (o "Software"),
+para lidar com o Software sem restrição, incluindo sem limitação os direitos
+de usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender
+cópias do Software, e permitir que as pessoas a quem o Software é fornecido o façam,
+sujeito às seguintes condições:
+
+O aviso de copyright acima e este aviso de permissão devem ser incluídos em todas
+as cópias ou partes substanciais do Software.
+
+O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU
+IMPLÍCITA, INCLUINDO MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO,
+APTIDÃO PARA UM PROPÓSITO ESPECÍFICO E NÃO VIOLAÇÃO. EM NENHUM CASO OS AUTORES
+OU DETENTORES DE DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER RECLAMAÇÃO,
+DANOS OU OUTRAS RESPONSABILIDADES, SEJA EM AÇÃO DE CONTRATO, ATO ILÍCITO OU DE
+OUTRA FORMA, DECORRENTES DE, FORA DE OU EM CONEXÃO COM O SOFTWARE OU O USO OU
+OUTRAS NEGOCIAÇÕES NO SOFTWARE.
+
+================================================================
+
+MERCADO NEURAL - DASHBOARD FINANCEIRA INTELIGENTE
+
+Este software é uma aplicação de dashboard financeiro desenvolvida para
+análise de investimentos em criptomoedas e ações, com integração de
+inteligência artificial.
+
+Recursos principais:
+- Dashboard financeiro em tempo real
+- Análise de criptomoedas e ações
+- IA Assistant integrada
+- Gráficos interativos
+- Sistema de alertas
+- Exportação de dados
+
+Para suporte técnico e mais informações:
+GitHub: https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural
+Email: radiotatuapefm@gmail.com
+
+================================================================
+

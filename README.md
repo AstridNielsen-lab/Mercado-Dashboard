@@ -1,6 +1,26 @@
-# Dashboard Financeira Inteligente - Mercado Neural
+# 🧠 Dashboard Financeira Inteligente - Mercado Neural
+
+🚀 **Nova Versão Desktop Disponível!** - Instalador completo para Windows com interface gráfica
 
 📊 Uma dashboard completa para gestão de investimentos em criptomoedas, ações e análise de mercado com IA integrada.
+
+## 📦 Downloads
+
+### 🎯 Versão Desktop (Recomendada)
+- **🖥️ Instalador Completo**: `Mercado-Neural-Setup-v1.0.0.exe` (164 MB)
+  - Interface gráfica de instalação em português
+  - Atalhos automáticos no Menu Iniciar e Área de Trabalho
+  - Desinstalador incluído
+  - Registro no Windows (Adicionar/Remover Programas)
+  
+- **📁 Versão Portable**: `Mercado-Neural-v1.0.0-Windows-Portable.zip` (269 MB)
+  - Não requer instalação
+  - Execute diretamente de qualquer pasta
+  - Ideal para testes ou uso temporário
+
+### 🌐 Versão Web
+- **Demo Online**: [splash.html](./splash.html) - Acesso instantâneo via navegador
+- **Aplicação Principal**: [index.html](./index.html) - Dashboard completo
 
 ## 🎆 Funcionalidades
 
@@ -40,23 +60,35 @@
 ## 🛠️ Tecnologias Utilizadas
 
 - **Frontend**: HTML5, CSS3 (Neumorphism), JavaScript ES6+
+- **Desktop**: Electron.js (Versão instalável para Windows)
 - **Gráficos**: Chart.js
 - **APIs**: 
   - Google Gemini (IA)
   - CoinGecko (Criptomoedas)
   - Yahoo Finance (Ações)
   - MercadoPago (Pagamentos)
-- **Armazenamento**: LocalStorage com criptografia
+- **Armazenamento**: LocalStorage com criptografia + Electron Store
 - **Design**: Responsivo, Dark/Light Mode
+- **Instalador**: NSIS (Windows)
 
 ## 🚀 Como Usar
 
-### 1. Instalação
+### Opção 1: Versão Web (Navegador)
 ```bash
 # Clone ou baixe os arquivos
 # Não requer instalação de dependências
 # Funciona diretamente no navegador
 ```
+
+### Opção 2: Versão Desktop (Windows) ⭐ NOVO!
+```bash
+# Instalação automática (recomendada)
+1. Execute install-windows.bat como Administrador
+2. Siga as instruções na tela
+3. A aplicação será compilada e instalada automaticamente
+```
+
+**📖 [Guia Completo de Instalação Windows](INSTALL_WINDOWS.md)**
 
 ### 2. Configuração das APIs
 
@@ -93,9 +125,17 @@ APIS: {
 **🔒 Nunca exponha suas chaves de API em repositórios públicos!**
 
 ### 3. Execução
+
+#### Versão Web:
 1. Abra o arquivo `index.html` em um navegador moderno
 2. A dashboard carregará automaticamente
 3. Todas as funcionalidades estarão disponíveis imediatamente
+
+#### Versão Desktop:
+1. Execute o instalador criado na pasta `dist/`
+2. Siga o assistente de instalação
+3. Use o atalho criado no Desktop ou Menu Iniciar
+4. Aproveite recursos exclusivos desktop!
 
 ## 📚 Estrutura do Projeto
 
@@ -275,21 +315,41 @@ console.log(dashboard.getSystemMetrics());
 localStorage.clear(); // Remove todos os dados salvos
 ```
 
+## 📦 Downloads
+
+### Versão Web
+- Abra `index.html` diretamente no navegador
+- Sem necessidade de instalação
+
+### Versão Desktop (Windows)
+- **Automática**: Execute `install-windows.bat`
+- **Manual**: Compile com `npm run build-win`
+- **Recursos extras**: Menu nativo, atalhos, notificações
+
 ## 📜 Atualizações Futuras
 
+- [x] ✅ Versão desktop para Windows
 - [ ] Integração com exchanges reais
-- [ ] Notificações push
+- [ ] Notificações push desktop
 - [ ] App mobile nativo
+- [ ] Versão para macOS
+- [ ] Versão para Linux
 - [ ] Mais indicadores técnicos
 - [ ] Social trading
 - [ ] Portfolio sharing
+- [ ] Auto-updates via GitHub
 
 ## 🎆 Suporte
 
-Para dúvidas ou sugestões:
+### Versão Web
 1. Verifique o console do navegador para erros
 2. Consulte a documentação das APIs utilizadas
 3. Teste em modo de desenvolvedor (F12)
+
+### Versão Desktop
+1. Use F12 para abrir as ferramentas de desenvolvedor
+2. Verifique logs em %APPDATA%\Mercado Neural\
+3. Consulte o [Guia de Instalação](INSTALL_WINDOWS.md) para problemas específicos
 
 ## 📝 Licença
 

@@ -1,0 +1,82 @@
+{
+  "name": "mercado-neural",
+  "version": "1.0.0",
+  "description": "Dashboard Financeira Inteligente - Mercado Neural",
+  "main": "electron/main.js",
+  "homepage": "./",
+  "private": true,
+  "author": {
+    "name": "Mercado Neural Team",
+    "email": "radiotatuapefm@gmail.com"
+  },
+  "build": {
+    "appId": "com.mercadoneural.dashboard",
+    "productName": "Mercado Neural",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules",
+      "!dist",
+      "!.git",
+      "!.gitignore",
+      "!README.md",
+      "!SECURITY_SETUP.md",
+      "!.env.example"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/images/icon.ico",
+      "requestedExecutionLevel": "asInvoker",
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Mercado Neural",
+      "installerIcon": "assets/images/icon.ico",
+      "uninstallerIcon": "assets/images/icon.ico",
+      "installerHeaderIcon": "assets/images/icon.ico",
+      "include": "electron/installer.nsh"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "AstridNielsen-lab",
+      "repo": "Mercado-Dashboard-Neural"
+    }
+  },
+  "scripts": {
+    "electron": "electron .",
+    "electron-dev": "set NODE_ENV=development && electron .",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "dist": "npm run build",
+    "pack": "electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps",
+    "start": "npm run electron",
+    "dev": "npm run electron-dev"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "electron-updater": "^6.1.7",
+    "electron-store": "^8.1.0",
+    "node-fetch": "^3.3.2"
+  },
+  "keywords": [
+    "finance",
+    "dashboard",
+    "crypto",
+    "stocks",
+    "ai",
+    "electron",
+    "windows"
+  ],
+  "license": "MIT"
+}
+

@@ -1,0 +1,35 @@
+{
+  "appId": "com.mercadoneural.dashboard",
+  "productName": "Mercado Neural",
+  "directories": {
+    "output": "dist"
+  },
+  "files": [
+    "**/*",
+    "!node_modules",
+    "!dist",
+    "!.git",
+    "!.gitignore",
+    "!README.md",
+    "!SECURITY_SETUP.md",
+    "!.env.example"
+  ],
+  "win": {
+    "target": "nsis",
+    "icon": "assets/images/icon.ico",
+    "requestedExecutionLevel": "asInvoker",
+    "artifactName": "${productName}-Setup-${version}.${ext}",
+    "sign": null
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Mercado Neural",
+    "installerIcon": "assets/images/icon.ico",
+    "uninstallerIcon": "assets/images/icon.ico",
+    "installerHeaderIcon": "assets/images/icon.ico"
+  }
+}
+

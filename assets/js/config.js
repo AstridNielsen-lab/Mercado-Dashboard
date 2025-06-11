@@ -5,14 +5,14 @@ const APP_CONFIG = {
     // Nunca exponha chaves de API em repositórios públicos!
     APIS: {
         MERCADOPAGO: {
-            PUBLIC_KEY: 'YOUR_MERCADOPAGO_PUBLIC_KEY_HERE',
-            ACCESS_TOKEN: 'YOUR_MERCADOPAGO_ACCESS_TOKEN_HERE',
-            CLIENT_ID: 'YOUR_MERCADOPAGO_CLIENT_ID_HERE',
-            CLIENT_SECRET: 'YOUR_MERCADOPAGO_CLIENT_SECRET_HERE'
+            PUBLIC_KEY: 'APP_USR-89626122-2e4b-4cb0-9817-c55ef42ed140',
+            ACCESS_TOKEN: 'APP_USR-3581564190523037-031023-d3a76685b122d5702bee3178000269c3-29008060',
+            CLIENT_ID: '3581564190523037',
+            CLIENT_SECRET: 'QAoPd9s0ClipRPbUeHxYu0CPx3j8lB63'
         },
         GEMINI: {
             API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent',
-            API_KEY: 'YOUR_GEMINI_API_KEY_HERE'
+            API_KEY: 'AIzaSyC4vPY7_qfh2LPOYSq1IhuRFTlO_ypVfOE'
         },
         COINGECKO: {
             BASE_URL: 'https://api.coingecko.com/api/v3',
@@ -31,25 +31,25 @@ const APP_CONFIG = {
     // ⚠️ IMPORTANTE: Configure com seus próprios endereços de carteira
     WALLETS: {
         PIX: {
-            email: 'seu-email@exemplo.com',
+            email: 'radiotatuapefm@gmail.com',
             type: 'pix'
         },
         PAYPAL: {
-            email: 'seu-email@exemplo.com',
+            email: 'radiotatuapefm@gmail.com',
             type: 'paypal'
         },
         BITCOIN: {
-            address: 'seu_endereco_bitcoin_aqui',
+            address: 'bc1qmjf00jqttk2kgemxtxh0hv4xp8fqztnn23cuc2',
             symbol: 'BTC',
             name: 'Bitcoin'
         },
         ETHEREUM: {
-            address: 'seu_endereco_ethereum_aqui',
+            address: '0x7481B4591e7f0DFAD23b884E78C46F0c207a3E35',
             symbol: 'ETH',
             name: 'Ethereum'
         },
         LITECOIN: {
-            address: 'seu_endereco_litecoin_aqui',
+            address: 'ltc1qxytts52mykr2u83x6ghwllmu7d524ltt702mcc',
             symbol: 'LTC',
             name: 'Litecoin'
         }
