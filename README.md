@@ -7,11 +7,8 @@
 ### 💰 Gestão Financeira
 - **Saldo Geral**: Visão consolidada de todos os ativos
 - **Carteiras Múltiplas**: PIX, PayPal, Bitcoin, Ethereum, Litecoin
-- **Endereços de Carteira**: Configurados conforme especificação
-  - PIX/PayPal: radiotatuapefm@gmail.com
-  - Bitcoin: bc1qmjf00jqttk2kgemxtxh0hv4xp8fqztnn23cuc2
-  - Ethereum: 0x7481B4591e7f0DFAD23b884E78C46F0c207a3E35
-  - Litecoin: ltc1qxytts52mykr2u83x6ghwllmu7d524ltt702mcc
+- **Endereços de Carteira**: Configuráveis através do arquivo de configuração
+- **Suporte Multi-moeda**: BRL, USD e principais criptomoedas
 
 ### 🪙 Criptomoedas
 - **Cotações em Tempo Real**: Integração com CoinGecko API
@@ -63,16 +60,37 @@
 
 ### 2. Configuração das APIs
 
-As chaves de API estão pré-configuradas:
+**⚠️ IMPORTANTE:** Para usar o projeto, você precisa configurar suas próprias chaves de API.
+
+#### 2.1. Obtenha as chaves necessárias:
+
+- **Google Gemini API**: 
+  - Acesse [Google AI Studio](https://makersuite.google.com/app/apikey)
+  - Crie uma nova chave de API
+  - Copie a chave gerada
+
+- **MercadoPago** (opcional):
+  - Acesse [MercadoPago Developers](https://www.mercadopago.com.br/developers)
+  - Crie uma aplicação
+  - Obtenha o PUBLIC_KEY e ACCESS_TOKEN
+
+#### 2.2. Configure as chaves:
+
+Edite o arquivo `assets/js/config.js` e substitua os valores nas seções correspondentes:
 
 ```javascript
-// MercadoPago
-PUBLIC_KEY: 'APP_USR-89626122-2e4b-4cb0-9817-c55ef42ed140'
-ACCESS_TOKEN: 'APP_USR-3581564190523037-031023-d3a76685b122d5702bee3178000269c3-29008060'
-
-// Google Gemini
-API_KEY: 'AIzaSyC4vPY7_qfh2LPOYSq1IhuRFTlO_ypVfOE'
+APIS: {
+    MERCADOPAGO: {
+        PUBLIC_KEY: 'SUA_CHAVE_PUBLICA_AQUI',
+        ACCESS_TOKEN: 'SEU_ACCESS_TOKEN_AQUI'
+    },
+    GEMINI: {
+        API_KEY: 'SUA_CHAVE_GEMINI_AQUI'
+    }
+}
 ```
+
+**🔒 Nunca exponha suas chaves de API em repositórios públicos!**
 
 ### 3. Execução
 1. Abra o arquivo `index.html` em um navegador moderno
@@ -134,16 +152,25 @@ Mercado Neural/
 
 ## 🔧 Personalização
 
-### Configurar APIs Próprias
-Edite o arquivo `assets/js/config.js`:
+### Configuração de APIs
+
+Todas as configurações de API estão centralizadas no arquivo `assets/js/config.js`. 
+
+**Estrutura de configuração:**
 
 ```javascript
 APIS: {
     GEMINI: {
-        API_KEY: 'SUA_CHAVE_AQUI'
+        API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent',
+        API_KEY: 'SUA_CHAVE_GEMINI_AQUI'
     },
     MERCADOPAGO: {
-        ACCESS_TOKEN: 'SEU_TOKEN_AQUI'
+        PUBLIC_KEY: 'SUA_CHAVE_PUBLICA_AQUI',
+        ACCESS_TOKEN: 'SEU_ACCESS_TOKEN_AQUI'
+    },
+    COINGECKO: {
+        BASE_URL: 'https://api.coingecko.com/api/v3',
+        API_KEY: null // Free tier disponível
     }
 }
 ```
@@ -165,10 +192,37 @@ STOCKS: {
 
 ## 🔒 Segurança
 
+### Boas Práticas Implementadas
+
 - **Armazenamento Local**: Dados salvos com criptografia base64
-- **Chaves API**: Configuradas de forma segura
-- **Simulação**: Transações são simuladas (não reais)
-- **Validação**: Inputs validados contra XSS
+- **Validação de API**: Chaves validadas com regex patterns
+- **Simulação Segura**: Transações são simuladas (não reais)
+- **Validação de Input**: Proteção contra XSS
+- **Rate Limiting**: Controle de frequência de requisições
+
+### ⚠️ Importantes Considerações de Segurança
+
+1. **Nunca exponha chaves de API em código público**
+2. **Use HTTPS em produção**
+3. **Implemente autenticação adequada para produção**
+4. **Configure CORS adequadamente**
+5. **Use variáveis de ambiente em produção**
+
+### Configuração para Produção
+
+Para uso em produção, considere:
+
+```javascript
+// Exemplo de configuração segura
+const API_CONFIG = {
+    GEMINI: {
+        API_KEY: process.env.GEMINI_API_KEY || 'fallback-for-dev'
+    },
+    MERCADOPAGO: {
+        ACCESS_TOKEN: process.env.MP_ACCESS_TOKEN || 'fallback-for-dev'
+    }
+};
+```
 
 ## 📱 Responsividade
 

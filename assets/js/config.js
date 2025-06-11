@@ -1,16 +1,18 @@
 // Configurações da Dashboard Financeira
 const APP_CONFIG = {
     // APIs Configuração
+    // ⚠️ IMPORTANTE: Substitua os valores pelos suas chaves reais
+    // Nunca exponha chaves de API em repositórios públicos!
     APIS: {
         MERCADOPAGO: {
-            PUBLIC_KEY: 'APP_USR-89626122-2e4b-4cb0-9817-c55ef42ed140',
-            ACCESS_TOKEN: 'APP_USR-3581564190523037-031023-d3a76685b122d5702bee3178000269c3-29008060',
-            CLIENT_ID: '3581564190523037',
-            CLIENT_SECRET: 'QAoPd9s0ClipRPbUeHxYu0CPx3j8lB63'
+            PUBLIC_KEY: 'YOUR_MERCADOPAGO_PUBLIC_KEY_HERE',
+            ACCESS_TOKEN: 'YOUR_MERCADOPAGO_ACCESS_TOKEN_HERE',
+            CLIENT_ID: 'YOUR_MERCADOPAGO_CLIENT_ID_HERE',
+            CLIENT_SECRET: 'YOUR_MERCADOPAGO_CLIENT_SECRET_HERE'
         },
         GEMINI: {
             API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent',
-            API_KEY: 'AIzaSyC4vPY7_qfh2LPOYSq1IhuRFTlO_ypVfOE'
+            API_KEY: 'YOUR_GEMINI_API_KEY_HERE'
         },
         COINGECKO: {
             BASE_URL: 'https://api.coingecko.com/api/v3',
@@ -18,7 +20,7 @@ const APP_CONFIG = {
         },
         ALPHA_VANTAGE: {
             BASE_URL: 'https://www.alphavantage.co/query',
-            API_KEY: 'demo' // Substituir por chave real
+            API_KEY: 'YOUR_ALPHA_VANTAGE_API_KEY_HERE' // Obtenha em: https://www.alphavantage.co/support/#api-key
         },
         YAHOO_FINANCE: {
             BASE_URL: 'https://query1.finance.yahoo.com/v8/finance/chart'
@@ -26,27 +28,28 @@ const APP_CONFIG = {
     },
     
     // Wallets Configuration
+    // ⚠️ IMPORTANTE: Configure com seus próprios endereços de carteira
     WALLETS: {
         PIX: {
-            email: 'radiotatuapefm@gmail.com',
+            email: 'seu-email@exemplo.com',
             type: 'pix'
         },
         PAYPAL: {
-            email: 'radiotatuapefm@gmail.com',
+            email: 'seu-email@exemplo.com',
             type: 'paypal'
         },
         BITCOIN: {
-            address: 'bc1qmjf00jqttk2kgemxtxh0hv4xp8fqztnn23cuc2',
+            address: 'seu_endereco_bitcoin_aqui',
             symbol: 'BTC',
             name: 'Bitcoin'
         },
         ETHEREUM: {
-            address: '0x7481B4591e7f0DFAD23b884E78C46F0c207a3E35',
+            address: 'seu_endereco_ethereum_aqui',
             symbol: 'ETH',
             name: 'Ethereum'
         },
         LITECOIN: {
-            address: 'ltc1qxytts52mykr2u83x6ghwllmu7d524ltt702mcc',
+            address: 'seu_endereco_litecoin_aqui',
             symbol: 'LTC',
             name: 'Litecoin'
         }
