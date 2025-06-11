@@ -51,11 +51,12 @@
   "scripts": {
     "electron": "electron .",
     "electron-dev": "set NODE_ENV=development && electron .",
-    "build": "electron-builder",
+    "build": "echo 'Build para web concluído' && exit 0",
     "build-win": "electron-builder --win",
-    "dist": "npm run build",
+    "build-electron": "electron-builder",
+    "dist": "npm run build-electron",
     "pack": "electron-builder --dir",
-    "postinstall": "electron-builder install-app-deps",
+    "postinstall": "echo 'Postinstall para web'",
     "start": "npm run electron",
     "dev": "npm run electron-dev"
   },
