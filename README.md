@@ -7,8 +7,8 @@
 ## 📦 Downloads e Acesso
 
 ### 🌐 Versão Web (Instantânea) ⭐ NOVA!
-- **🎯 Splash Screen**: [splash.html](./splash.html) - Portal de entrada com downloads
-- **📊 Dashboard Principal**: [index.html](./index.html) - Aplicação completa no navegador
+- **🎯 Portal de Entrada**: [index.html](./index.html) - Splash screen com downloads
+- **📊 Dashboard Principal**: [dashboard.html](./dashboard.html) - Aplicação completa no navegador
 - **✨ Funcionalidades**:
   - Acesso instantâneo sem instalação
   - Interface responsiva e moderna
@@ -84,24 +84,24 @@
 
 ### Opção 1: Versão Web (Navegador) ⭐ NOVA!
 
-**Acesso Rápido via Splash Screen:**
-1. Abra [splash.html](./splash.html) no navegador
-2. Escolha "Usar Versão Web" para acessar imediatamente
+**Acesso Rápido via Portal:**
+1. Abra [index.html](./index.html) no navegador (página inicial)
+2. Escolha "Usar Versão Web" para acessar o dashboard
 3. Ou baixe a versão desktop diretamente
 
-**Acesso Direto:**
+**Acesso Direto ao Dashboard:**
 ```bash
 # Clone ou baixe os arquivos
 git clone https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural
 cd Mercado-Dashboard-Neural
 
-# Abra index.html no navegador (não requer servidor)
+# Abra index.html para splash screen ou dashboard.html para acesso direto
 ```
 
 ### Opção 2: Versão Desktop (Windows)
 
-**Via Splash Screen (Recomendado):**
-1. Acesse [splash.html](./splash.html)
+**Via Portal (Recomendado):**
+1. Acesse [index.html](./index.html)
 2. Clique em "Baixar Instalador" ou "Versão Portable"
 3. Siga as instruções na tela
 
@@ -152,13 +152,13 @@ APIS: {
 ### 3. Execução
 
 #### Versão Web:
-**Via Splash Screen (Novo):**
-1. Abra [splash.html](./splash.html) em um navegador moderno
+**Via Portal (Novo):**
+1. Abra [index.html](./index.html) em um navegador moderno
 2. Clique em "Usar Versão Web" para acesso instantâneo
-3. A dashboard carregará automaticamente
+3. O dashboard carregará automaticamente
 
 **Acesso Direto:**
-1. Abra o arquivo `index.html` diretamente no navegador
+1. Abra o arquivo `dashboard.html` diretamente no navegador
 2. Todas as funcionalidades estarão disponíveis imediatamente
 3. Dados são salvos localmente no navegador
 
@@ -173,8 +173,8 @@ APIS: {
 ```
 Mercado Neural/
 │
-├── index.html              # Dashboard principal
-├── splash.html             # Página de entrada e downloads
+├── index.html              # Portal de entrada e downloads (splash screen)
+├── dashboard.html          # Dashboard principal da aplicação
 │
 ├── assets/
 │   ├── css/
@@ -350,13 +350,13 @@ localStorage.clear(); // Remove todos os dados salvos
 ## 📦 Acesso Rápido
 
 ### 🌐 Versão Web (Instantânea)
-- **Portal de Entrada**: [splash.html](./splash.html) - Splash screen com opções
-- **Dashboard Direto**: [index.html](./index.html) - Acesso direto à aplicação
+- **Portal de Entrada**: [index.html](./index.html) - Splash screen com opções
+- **Dashboard Direto**: [dashboard.html](./dashboard.html) - Acesso direto à aplicação
 - **Sem instalação**: Funciona diretamente no navegador
 - **Responsivo**: Interface adaptável a qualquer dispositivo
 
 ### 🖥️ Versão Desktop (Windows)
-- **Via Splash Screen**: Links diretos para download na página inicial
+- **Via Portal**: Links diretos para download na página inicial
 - **Automática**: Execute `install-windows.bat`
 - **Manual**: Compile com `npm run build-win`
 - **Recursos extras**: Menu nativo, atalhos, notificações sistema
@@ -391,17 +391,17 @@ localStorage.clear(); // Remove todos os dados salvos
 ## 🎆 Suporte
 
 ### 🌐 Versão Web
-1. **Primeiro acesso**: Use [splash.html](./splash.html) como ponto de entrada
+1. **Primeiro acesso**: Use [index.html](./index.html) como ponto de entrada
 2. **Problemas de loading**: Verifique o console do navegador (F12)
 3. **APIs não funcionando**: Configure suas chaves em `assets/js/config.js`
 4. **Dados perdidos**: Verifique se localStorage está habilitado
 5. **Performance**: Use navegadores modernos (Chrome, Firefox, Edge)
 
 ### 🖥️ Versão Desktop
-1. **Instalação**: Baixe via splash screen ou consulte [INSTALL_WINDOWS.md](INSTALL_WINDOWS.md)
+1. **Instalação**: Baixe via portal inicial ou consulte [INSTALL_WINDOWS.md](INSTALL_WINDOWS.md)
 2. **Debugging**: Use F12 para abrir ferramentas de desenvolvedor
 3. **Logs**: Verifique em `%APPDATA%\Mercado Neural\`
-4. **Atualizações**: Re-baixe da splash screen ou GitHub releases
+4. **Atualizações**: Re-baixe do portal inicial ou GitHub releases
 
 ### 📞 Canais de Suporte
 - **Issues GitHub**: [Reportar problemas](https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural/issues)
@@ -417,9 +417,9 @@ Use por sua conta e risco em ambiente de produção.
 
 ## 🚀 Acesso Rápido
 
-**🌐 [▶️ USAR VERSÃO WEB AGORA](./splash.html)** 
+**🌐 [▶️ USAR VERSÃO WEB AGORA](./index.html)** 
 
-**📱 [Dashboard Direto](./index.html)**
+**📱 [Dashboard Direto](./dashboard.html)**
 
 **📂 [Baixar Desktop](https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural/releases/latest)**
 

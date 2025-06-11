@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard Financeira Inteligente - Mercado Neural. Gerencie criptomoedas, ações e investimentos com IA integrada.">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDJDOC4yNjggMiAyIDguMjY4IDIgMTZTOC4yNjggMzAgMTYgMzAgMzAgMjMuNzMyIDMwIDE2IDIzLjczMiAyIDE2IDJaIiBmaWxsPSIjNjY3RUVBIi8+CjxwYXRoIGQ9Ik0yMiAxMkgxMEMxMC41NTIgMTIgMTEgMTEuNTUyIDExIDExUzExLjQ0OCAxMCAxMiAxMEgyMkMyMi41NTIgMTAgMjMgMTAuNDQ4IDIzIDExUzIyLjU1MiAxMiAyMiAxMloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yMCAxNkgxMkMxMS40NDggMTYgMTEgMTUuNTUyIDExIDE1UzExLjQ0OCAxNCAxMiAxNEgyMEMyMC41NTIgMTQgMjEgMTQuNDQ4IDIxIDE1UzIwLjU1MiAxNiAyMCAxNloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xOCAyMEgxNEMxMy40NDggMjAgMTMgMTkuNTUyIDEzIDE5UzEzLjQ0OCAxOCAxNCAxOEgxOEMxOC41NTIgMTggMTkgMTguNDQ4IDE5IDE5UzE4LjU1MiAyMCAxOCAyMFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=">
+    <title>Dashboard Financeira Inteligente - Mercado Neural</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/neumorphism.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p>Carregando Dashboard...</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <h1>Mercado Neural</h1>
+            </div>
+            <div class="header-controls">
+                <a href="index.html" class="btn-desktop" title="Voltar ao Início">
+                    <i class="fas fa-home"></i>
+                    <span>Início</span>
+                </a>
+                <button id="theme-toggle" class="btn-icon">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="notifications-btn" class="btn-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="profile-img">
+                    <span>Admin</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#finances" class="nav-item" data-section="finances">
+                <i class="fas fa-wallet"></i>
+                <span>Finanças</span>
+            </a>
+            <a href="#crypto" class="nav-item" data-section="crypto">
+                <i class="fab fa-bitcoin"></i>
+                <span>Criptomoedas</span>
+            </a>
+            <a href="#stocks" class="nav-item" data-section="stocks">
+                <i class="fas fa-chart-candlestick"></i>
+                <span>Ações</span>
+            </a>
+            <a href="#ai-bot" class="nav-item" data-section="ai-bot">
+                <i class="fas fa-robot"></i>
+                <span>IA Bot</span>
+            </a>
+            <a href="#reports" class="nav-item" data-section="reports">
+                <i class="fas fa-chart-bar"></i>
+                <span>Relatórios</span>
+            </a>
+            <a href="#settings" class="nav-item" data-section="settings">
+                <i class="fas fa-cog"></i>
+                <span>Configurações</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Overview -->
+        <section id="dashboard-section" class="content-section active">
+            <div class="section-header">
+                <h2>Dashboard Geral</h2>
+                <div class="date-time" id="current-datetime"></div>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Patrimônio Total</h3>
+                        <p class="stat-value" id="total-assets">R$ 0,00</p>
+                        <span class="stat-change positive">+5.2%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon crypto">
+                        <i class="fab fa-bitcoin"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Criptomoedas</h3>
+                        <p class="stat-value" id="crypto-value">R$ 0,00</p>
+                        <span class="stat-change positive">+12.8%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon stocks">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Ações</h3>
+                        <p class="stat-value" id="stocks-value">R$ 0,00</p>
+                        <span class="stat-change negative">-2.1%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon ai">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Score IA</h3>
+                        <p class="stat-value">87/100</p>
+                        <span class="stat-change positive">Excelente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="charts-row">
+                <div class="chart-container">
+                    <h3>Evolução Patrimonial</h3>
+                    <canvas id="portfolio-chart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Distribuição de Ativos</h3>
+                    <canvas id="allocation-chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Finances Section -->
+        <section id="finances-section" class="content-section">
+            <div class="section-header">
+                <h2>Gestão Financeira</h2>
+                <button class="btn-primary">Nova Transação</button>
+            </div>
+            
+            <div class="finance-grid">
+                <div class="balance-card">
+                    <h3>Saldo Geral</h3>
+                    <p class="balance-amount" id="general-balance">R$ 0,00</p>
+                </div>
+                
+                <div class="accounts-card">
+                    <h3>Contas</h3>
+                    <div class="account-list">
+                        <div class="account-item">
+                            <i class="fab fa-pix"></i>
+                            <div class="account-info">
+                                <span class="account-name">PIX</span>
+                                <span class="account-email">radiotatuapefm@gmail.com</span>
+                                <span class="account-balance">R$ 0,00</span>
+                            </div>
+                        </div>
+                        <div class="account-item">
+                            <i class="fab fa-paypal"></i>
+                            <div class="account-info">
+                                <span class="account-name">PayPal</span>
+                                <span class="account-email">radiotatuapefm@gmail.com</span>
+                                <span class="account-balance">R$ 0,00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crypto Section -->
+        <section id="crypto-section" class="content-section">
+            <div class="section-header">
+                <h2>Criptomoedas</h2>
+                <div class="crypto-controls">
+                    <select id="crypto-timeframe">
+                        <option value="24h">24 Horas</option>
+                        <option value="7d">7 Dias</option>
+                        <option value="30d">30 Dias</option>
+                    </select>
+                    <button class="btn-primary">Comprar Crypto</button>
+                </div>
+            </div>
+            
+            <div class="crypto-wallets">
+                <div class="wallet-card">
+                    <div class="wallet-header">
+                        <i class="fab fa-bitcoin"></i>
+                        <h3>Bitcoin</h3>
+                        <span class="wallet-symbol">BTC</span>
+                    </div>
+                    <div class="wallet-info">
+                        <p class="wallet-address">bc1qmjf00jqttk2kgemxtxh0hv4xp8fqztnn23cuc2</p>
+                        <p class="wallet-balance">0.00 BTC</p>
+                        <p class="wallet-value">R$ 0,00</p>
+                        <span class="price-change" id="btc-change">0%</span>
+                    </div>
+                    <div class="wallet-actions">
+                        <button class="btn-buy">Comprar</button>
+                        <button class="btn-sell">Vender</button>
+                    </div>
+                </div>
+                
+                <div class="wallet-card">
+                    <div class="wallet-header">
+                        <i class="fab fa-ethereum"></i>
+                        <h3>Ethereum</h3>
+                        <span class="wallet-symbol">ETH</span>
+                    </div>
+                    <div class="wallet-info">
+                        <p class="wallet-address">0x7481B4591e7f0DFAD23b884E78C46F0c207a3E35</p>
+                        <p class="wallet-balance">0.00 ETH</p>
+                        <p class="wallet-value">R$ 0,00</p>
+                        <span class="price-change" id="eth-change">0%</span>
+                    </div>
+                    <div class="wallet-actions">
+                        <button class="btn-buy">Comprar</button>
+                        <button class="btn-sell">Vender</button>
+                    </div>
+                </div>
+                
+                <div class="wallet-card">
+                    <div class="wallet-header">
+                        <i class="fab fa-litecoin-sign"></i>
+                        <h3>Litecoin</h3>
+                        <span class="wallet-symbol">LTC</span>
+                    </div>
+                    <div class="wallet-info">
+                        <p class="wallet-address">ltc1qxytts52mykr2u83x6ghwllmu7d524ltt702mcc</p>
+                        <p class="wallet-balance">0.00 LTC</p>
+                        <p class="wallet-value">R$ 0,00</p>
+                        <span class="price-change" id="ltc-change">0%</span>
+                    </div>
+                    <div class="wallet-actions">
+                        <button class="btn-buy">Comprar</button>
+                        <button class="btn-sell">Vender</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="crypto-chart-container">
+                <canvas id="crypto-chart"></canvas>
+            </div>
+        </section>
+
+        <!-- Stocks Section -->
+        <section id="stocks-section" class="content-section">
+            <div class="section-header">
+                <h2>Ações - Bolsa de Valores</h2>
+                <button class="btn-primary">Nova Ordem</button>
+            </div>
+            
+            <div class="stocks-table-container">
+                <table class="stocks-table">
+                    <thead>
+                        <tr>
+                            <th>Ticker</th>
+                            <th>Preço</th>
+                            <th>Variação</th>
+                            <th>%</th>
+                            <th>Volume</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stocks-tbody">
+                        <!-- Dados serão preenchidos via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- AI Bot Section -->
+        <section id="ai-bot-section" class="content-section">
+            <div class="section-header">
+                <h2>IA - Assistente de Investimentos</h2>
+                <div class="ai-status">
+                    <div class="status-indicator active"></div>
+                    <span>IA Online</span>
+                </div>
+            </div>
+            
+            <div class="ai-container">
+                <div class="ai-chat">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Olá! Sou seu assistente de investimentos com IA. Posso ajudá-lo com análises de mercado, recomendações de investimento e estratégias financeiras. Como posso ajudá-lo hoje?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" id="ai-input" placeholder="Digite sua pergunta sobre investimentos...">
+                        <button id="send-ai-message" class="btn-send">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="ai-quick-actions">
+                    <h3>Perguntas Rápidas</h3>
+                    <div class="quick-questions">
+                        <button class="quick-question" data-question="Quais ações têm maior potencial hoje?">
+                            📈 Ações em alta
+                        </button>
+                        <button class="quick-question" data-question="Devo comprar Bitcoin agora?">
+                            ₿ Análise Bitcoin
+                        </button>
+                        <button class="quick-question" data-question="Como diversificar minha carteira?">
+                            🎯 Diversificação
+                        </button>
+                        <button class="quick-question" data-question="Análise de risco da minha carteira">
+                            ⚠️ Análise de Risco
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports-section" class="content-section">
+            <div class="section-header">
+                <h2>Relatórios e Análises</h2>
+                <div class="report-controls">
+                    <button class="btn-secondary">Exportar PDF</button>
+                    <button class="btn-secondary">Exportar CSV</button>
+                </div>
+            </div>
+            
+            <div class="reports-grid">
+                <div class="report-card">
+                    <h3>Performance Mensal</h3>
+                    <canvas id="monthly-performance-chart"></canvas>
+                </div>
+                <div class="report-card">
+                    <h3>Metas Financeiras</h3>
+                    <div class="goals-list" id="financial-goals">
+                        <!-- Goals will be populated via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings-section" class="content-section">
+            <div class="section-header">
+                <h2>Configurações</h2>
+            </div>
+            
+            <div class="settings-grid">
+                <div class="settings-card">
+                    <h3>API Configurações</h3>
+                    <div class="setting-item">
+                        <label>MercadoPago Access Token</label>
+                        <input type="password" id="mp-token" placeholder="APP_USR-...">
+                    </div>
+                    <div class="setting-item">
+                        <label>Google Gemini API Key</label>
+                        <input type="password" id="gemini-key" placeholder="AIzaSy...">
+                    </div>
+                    <button class="btn-primary">Salvar APIs</button>
+                </div>
+                
+                <div class="settings-card">
+                    <h3>Notificações</h3>
+                    <div class="setting-item">
+                        <label class="switch">
+                            <input type="checkbox" id="price-alerts">
+                            <span class="slider"></span>
+                        </label>
+                        <span>Alertas de Preço</span>
+                    </div>
+                    <div class="setting-item">
+                        <label class="switch">
+                            <input type="checkbox" id="ai-recommendations">
+                            <span class="slider"></span>
+                        </label>
+                        <span>Recomendações IA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Notification Modal -->
+    <div id="notification-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Notificações</h2>
+            <div class="notifications-list" id="notifications-list">
+                <!-- Notifications will be populated via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/crypto.js"></script>
+    <script src="assets/js/stocks.js"></script>
+    <script src="assets/js/ai-bot.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
