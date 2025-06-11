@@ -16,19 +16,19 @@
   - Salva dados localmente no navegador
 
 ### 🎯 Versão Desktop
-- **🖥️ Instalador Completo**: [Baixar Setup (164 MB)](https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural/releases/latest/download/Mercado-Neural-Setup-v1.0.0.exe)
+- **🖥️ Instalador Completo**: [Baixar Setup (164 MB)](https://github.com/AstridNielsen-lab/Mercado-Dashboard/releases/latest/download/Mercado-Neural-Setup-v1.0.0.exe)
   - Interface gráfica de instalação em português
   - Atalhos automáticos no Menu Iniciar e Área de Trabalho
   - Desinstalador incluído
   - Registro no Windows (Adicionar/Remover Programas)
   
-- **📁 Versão Portable**: [Baixar ZIP (269 MB)](https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural/releases/latest/download/Mercado-Neural-v1.0.0-Windows-Portable.zip)
+- **📁 Versão Portable**: [Baixar ZIP (269 MB)](https://github.com/AstridNielsen-lab/Mercado-Dashboard/releases/latest/download/Mercado-Neural-v1.0.0-Windows-Portable.zip)
   - Não requer instalação
   - Execute diretamente de qualquer pasta
   - Ideal para testes ou uso temporário
 
 ### 📱 Links Úteis
-- **🔗 GitHub**: [Ver repositório](https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural)
+- **🔗 GitHub**: [Ver repositório](https://github.com/AstridNielsen-lab/Mercado-Dashboard)
 - **📖 Documentação**: Incluída neste README
 
 ## 🎆 Funcionalidades
@@ -92,8 +92,8 @@
 **Acesso Direto ao Dashboard:**
 ```bash
 # Clone ou baixe os arquivos
-git clone https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural
-cd Mercado-Dashboard-Neural
+git clone https://github.com/AstridNielsen-lab/Mercado-Dashboard
+cd Mercado-Dashboard
 
 # Abra index.html para splash screen ou dashboard.html para acesso direto
 ```
@@ -404,7 +404,7 @@ localStorage.clear(); // Remove todos os dados salvos
 4. **Atualizações**: Re-baixe do portal inicial ou GitHub releases
 
 ### 📞 Canais de Suporte
-- **Issues GitHub**: [Reportar problemas](https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural/issues)
+- **Issues GitHub**: [Reportar problemas](https://github.com/AstridNielsen-lab/Mercado-Dashboard/issues)
 - **Documentação**: Este README
 - **Código**: Totalmente open source para análise
 
@@ -421,7 +421,7 @@ Use por sua conta e risco em ambiente de produção.
 
 **📱 [Dashboard Direto](./dashboard.html)**
 
-**📂 [Baixar Desktop](https://github.com/AstridNielsen-lab/Mercado-Dashboard-Neural/releases/latest)**
+**📂 [Baixar Desktop](https://github.com/AstridNielsen-lab/Mercado-Dashboard/releases/latest)**
 
 ---
 
